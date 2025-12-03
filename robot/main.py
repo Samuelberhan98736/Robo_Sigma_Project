@@ -1,16 +1,17 @@
-#sampe pusdo code until we get our parts
+from communication.bluetooth_server import BluetoothServer
+from gopigo_controller import GoPiGoController
+from sensors import SensorSuite
+from navigation import NavigationController
+from object_detection import ObjectDetector
 
-from gopigo_controller import GoPiGoContoller
-from sensors import DistanceSensor
-from communication.bluetooth_server import BluetoothSrver
+def main():
+    controller = GoPiGoController()
+    sensors = SensorSuite()
+    detector = ObjectDetector()
+    nav = NavigationController(controller, sensors, detector)
 
-robot = GoPiGoController()
-sensor = DistanceSensor()
-bt_server = BluetoothServer(robot)
+    server = BluetoothServer(nav, controller, sensors)
+    server.start()
 
-while True:
-    distance = sensor.get_distance()
-    if distance < 20:
-        robot.stop()
-        robot.turn_right()
-    bt_server.listen()
+if __name__ == "__main__":
+    main()
