@@ -9,9 +9,9 @@ import time
 from pathlib import Path
 from typing import Optional
 
-from gopigo_controller import GoPiGoController
+from robot.drive.gopigo_drive import GoPiGoController
 from sensors import SensorSuite
-from object_detection import ObjectDetector
+from robot.preception.object_detection import ObjectDetector
 
 CONFIG_PATH = Path(__file__).resolve().parent / "config.json"
 

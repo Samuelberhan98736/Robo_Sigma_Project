@@ -1,8 +1,8 @@
 from communication.bluetooth_server import BluetoothServer
-from gopigo_controller import GoPiGoController
+from robot.drive.gopigo_drive import GoPiGoController
 from sensors import SensorSuite
 from navigation import NavigationController
-from object_detection import ObjectDetector
+from robot.preception.object_detection import ObjectDetector
 
 def main():
     controller = GoPiGoController()

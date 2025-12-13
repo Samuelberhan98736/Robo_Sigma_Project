@@ -14,7 +14,7 @@ import threading
 from pathlib import Path
 
 from navigation import NavigationController
-from gopigo_controller import GoPiGoController
+from robot.drive.gopigo_drive import GoPiGoController
 from sensors import SensorSuite
 
 CONFIG_PATH = Path(__file__).resolve().parents[1] / "config.json"
