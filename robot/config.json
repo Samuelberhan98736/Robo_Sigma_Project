@@ -1,35 +1,26 @@
 {
-  "robot_name": "TeamSigmaBot",
-
-  "motors": {
-    "default_speed": 200,
-    "turn_speed": 150
+  "drive": {
+    "default_speed": 60,
+    "turn_speed": 50
   },
-
-  "navigation": {
-    "safe_distance_cm": 20,
-    "scan_step_degrees": 20,
-    "max_scan_angle": 60
-  },
-
-  "ultrasonic": {
-    "trig_pin": 23,
-    "echo_pin": 24,
-    "timeout_s": 0.02
-  },
-
-  "camera": {
-    "width": 640,
-    "height": 480
-  },
-
-  "object_detection": {
-    "model_path": "/home/pi/models/pill_detector.pt",
-    "confidence_threshold": 0.5
-  },
-
-  "bluetooth": {
-    "uuid": "94f39d29-7d6d-437d-973b-fba39e49d4ee",
-    "service_name": "TeamSigmaRobot"
+  "arm": {
+    "servo_channels": {
+      "base": 0,
+      "shoulder": 1,
+      "elbow": 2,
+      "gripper": 3
+    },
+    "home_angles": {
+      "base": 90,
+      "shoulder": 90,
+      "elbow": 90,
+      "gripper": 90
+    },
+    "limits": {
+      "base": [0, 180],
+      "shoulder": [10, 170],
+      "elbow": [10, 170],
+      "gripper": [20, 160]
+    }
   }
 }
