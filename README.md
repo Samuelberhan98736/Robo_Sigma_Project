@@ -222,6 +222,7 @@ Computer Science, Georgia State University
 Computer Science, Georgia State University
 
 ---
+**Scenario based video explanation**: (link)[https://youtube.com/shorts/aLpCR2KaPFs?feature=share]
 
 ## 📜 License
 
